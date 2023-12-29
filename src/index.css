@@ -36,7 +36,7 @@ body {
 
 section {
   width: 100%;
-  padding: 8rem 0;
+  padding: 4rem 0;
 }
 
 .container {
@@ -297,15 +297,31 @@ p {
   width: 100%;
 }
 
+.--btn-purple {
+  color: #fff;
+  /* background: #007bff; */
+  background: #d362fd;
+}
+
 .--btn-primary {
   color: #fff;
   background: #007bff;
+  
 }
 .--btn-secondary {
   color: #fff;
   border: 1px solid #fff;
   background: transparent;
 }
+
+.--btn-transparent {
+  color: #000000;
+  border: 0.5px solid #000000;
+  background: transparent;
+  padding: 10px;
+  
+}
+
 .--btn-danger {
   color: #fff;
   background: orangered;
