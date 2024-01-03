@@ -3,6 +3,8 @@ import  styles  from './auth.module.scss';
 import loginImg from "../../assets/login.png"
 import { Link } from  "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
+import Card from '../../components/card/Card.js';
+// import Card from "../../components/card/Card.js"
 
 
 const Login = () => {
@@ -12,24 +14,32 @@ const Login = () => {
         <img src={loginImg} alt="Login" width='600px' />
       </div>
 
+      <Card>
       <div className={styles.form}>
         <h2>Login</h2>
         <form >
-            <input type="text" placeholer='Email'
-            required/>
+            <input type="text" placeholder='Email'
+            required />
             <input type="password" 
-            placeholer='Paassword'required/>
+            placeholder='Password' required/>
             <button className='--btn --btn-purple --btn-block'>Login</button>
             <div className={styles.Links}>
                 <Link to='/reset'>Reset Password</Link>
             </div>
             <p>-- or --</p>
         </form>
-        <button className='--btn --btn-primary --btn-block'><div style={{   padding: '1px', borderRadius: '2px', display: 'inline-block' }}>
-    <FcGoogle />
+        <button className='--btn --btn-primary --btn-block'>
+            <div className={styles['google-icon-div']}>
+        <FcGoogle />
   </div> 
     Log in With Google</button>
+    <span className={styles.register}>
+        <p>Don't have an account? </p>
+        <Link to='/register'>Register</Link>
+      </span>
       </div>
+      </Card>
+
     </section>
   )
 }
