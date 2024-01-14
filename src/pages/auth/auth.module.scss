@@ -8,6 +8,10 @@
       animation: slide-down 0.5s ease;
     }
 
+    .img img{
+      width: 600px;
+    }
+
     .google-icon-div{
         background-color: white;
         display: inline-block;
@@ -79,6 +83,23 @@
   
   @media screen and (max-width: 700px) {
     .img {
-      display: none;
+      // display: none;
+      // width: 30px;
+    }
+    .img img{
+      width: 100% !important;
+      // background-color: #F5DEFF;
+    }
+    
+    .auth{
+      display: block;
+      min-height: 80vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .form {
+      width: 100% !important; /* Adjust the width as needed */
+      /* Add other styles for centering as needed */
+      margin-bottom: 2rem;
     }
   }

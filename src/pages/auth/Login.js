@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import  styles  from './auth.module.scss';
 import loginImg from "../../assets/login.png"
+import loginPhoneImg from "../../assets/login-phone.png";
 import { Link, useNavigate } from  "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import Card from '../../components/card/Card.js';
@@ -57,7 +58,7 @@ const Login = () => {
     {isLoading && <Loader />}
     <section className={`container ${styles.auth}`}>
       <div className={styles.img}>
-        <img src={loginImg} alt="Login" width='600px' />
+        <img src={loginImg} alt="Login"  />
       </div>
 
       <Card>
