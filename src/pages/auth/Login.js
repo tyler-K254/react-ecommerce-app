@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import  styles  from './auth.module.scss';
 import loginImg from "../../assets/login.png"
-import loginPhoneImg from "../../assets/login-phone.png";
+// import loginPhoneImg from "../../assets/login-phone.png";
 import { Link, useNavigate } from  "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import Card from '../../components/card/Card.js';
@@ -25,7 +25,7 @@ const Login = () => {
       setIsLoading(true)
       signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    const user = userCredential.user;
+    // const user = userCredential.user;
     setIsLoading(false)
     toast.success('Login Successful')
     navigate('/')
@@ -33,6 +33,7 @@ const Login = () => {
   })
   .catch((error) => {
     toast.error(error.message)
+    setIsLoading(false);
   });
     }
     
@@ -42,7 +43,7 @@ const Login = () => {
     signInWithPopup(auth, provider)
   .then((result) => {
     // The signed-in user info.
-    const user = result.user;
+    // const user = result.user;
     toast.success('Login Successfully')
     navigate('/')
     
